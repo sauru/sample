@@ -1,0 +1,23 @@
+<html>
+<header>
+	BlogPosts
+	</header>
+	<h1>Sign in</h1>
+	<%= form_for(:user, :url => {:controller => 'post', :action => 'submit'}) do |f| %>
+		<p>Email: <%= f.text_field :email%></p>
+	<p>Password: <%= f.password_field :pass%></p>
+	<%= f.submit :Signin %>
+	<% end %>
+
+	
+	
+	<h1>Sign Up</h1>
+<%= form_for(:sign_up, :url => {:controller => 'user', :action =>'new' 'action'}) do |f| %>
+	<p>Name: <%= f.text_field :name%></p>
+	<p>Email: <%= f.text_field :email%></p>
+	<p>Password: <%= f.password_field :pass%></p>
+	<%= f.submit :Signup %>
+	<a href="reset.html.erb">Forgot password??</a>
+	<% end %>
+	
+</html>

@@ -1,0 +1,16 @@
+<h1>Sign Up</h1>
+
+<%= form_tag(:controller => 'user', :action => 'create') do |f| %>
+	<h3> <%= flash[:notice]%> </h3>
+	<br/> <br/>
+	  <%= label_tag(:name, "name") %><%= text_field_tag(:name) %>
+	  <%= label_tag(:email, "email") %><%= text_field_tag(:email) %>
+   <%= label_tag(:pass, "password") %><%= password_field_tag(:pass) %>
+   <%= submit_tag("Signup")%>
+
+	<%= link_to "forgot password???", reset_password_path  %>
+	<br/><br/>
+	<%= link_to "Sign in here", sign_in_path  %>
+	
+	
+	<% end %>
